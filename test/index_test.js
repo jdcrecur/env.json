@@ -1,35 +1,27 @@
 import envJson from '../'
 
-describe('check input output', () => {
-  it('The set fails', (done) => {
-    try{
-      envJson.set({ path: './test/envFail.json' })
-      done('Did not throw an error')
-    } catch ( e ) {
-      done()
+describe('check input output for en.json file', () => {
+  it('The set fails', async () => {
+    try {
+      await envJson.set({path: './test/envPass.json'})
+    } catch (e) {
+      throw e
     }
   })
-
-  it('The set passes', (done) => {
-    try{
-      envJson.set({ path: './test/envPass.json' })
-      console.log(envJson.get('environment'))
-      done()
-    } catch ( e ) {
-      done(e)
+/*
+  it('The set passes', async () => {
+    try {
+      await envJson.set({path: './test/envPass.json'})
+    } catch (e) {
+      throw e
     }
   })
-
-  it('The get returns correct result', (done) => {
-    try{
-      envJson.set({ path: './test/envPass.json' })
-      if( envJson.get('environment') === 'develop' ){
-        done()
-      } else {
-        done('Expected develop but got: ' + envJson.get('environment') )
-      }
-    } catch ( e ) {
-      done(e)
+  it('The get returns correct result', async () => {
+    try {
+      await envJson.set({path: './test/envPass.json'})
+      expect(envJson.get('environment')).toEqual('develop')
+    } catch (e) {
+      throw e
     }
-  })
+  })*/
 })
