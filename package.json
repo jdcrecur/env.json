@@ -1,6 +1,6 @@
 {
 	"name": "env.json",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"main": "dist/envJson.js",
 	"module": "dist/envJson.mjs",
 	"jsnext:main": "dist/envJson.mjs",

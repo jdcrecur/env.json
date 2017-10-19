@@ -34,11 +34,11 @@ First create an `env.json` file at the root of your project and ignore it from y
 }
 ```
 
-Second set the variables into process.env
+Second set the variables into process.env, the set returns a promise
 ```
 import envJson from 'envJson'
 
-envJson.set()
+await envJson.set()
 ```
 
 Third use the data in your app
