@@ -9,6 +9,8 @@ env.json sets the process env's from the env.json file at the root of your proje
 
 If not default value is set and no environment variable is set an error is automatically thrown.
 
+envJson.set() returns a promise when complete.
+
 The package then offers a `get` function to fetch env. variable by short hand.
 
 ## How to use
